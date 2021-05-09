@@ -1,7 +1,6 @@
-import classes from './layout.css';
+import classes from './layout.module.css';
 import Aux from "../../HOC/Hoc";
 const Layout = (props) => {
-  console.log(classes);
   return (
     <Aux>
       <div>toolbar, sidedrawer, backdrop </div>
