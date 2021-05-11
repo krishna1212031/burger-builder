@@ -18,7 +18,7 @@ let transformedIngredients = Object.keys(props.ingredients)
 
   return ( 
     <div className= {classes.Burger}>
-      <BurgerIngredient type = "breadTop"/> 
+      <BurgerIngredient type = "breadTop"/>
       {transformedIngredients}
       {/* <BurgerIngredient type = "Cheese"/> 
       <BurgerIngredient type = "Meat"/>   */}

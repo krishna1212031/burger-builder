@@ -1,0 +1,26 @@
+.logo{
+  padding : 4px 4px 4px 0;
+  height: 30px;
+  display: flex;
+  align-items:center;
+  justify-content:right;
+}
+
+.logo img{
+height : 100%
+}
+
+.logo p{
+  color: white;
+  margin-left: 5px;
+  
+}
+
+@media(min-width : 500px){
+  .logo{
+    align-items: center;
+    justify-content:center;
+    margin-bottom: inherit;
+    transform: translateX(px);
+  }
+}
