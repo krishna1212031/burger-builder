@@ -2,7 +2,7 @@ import BuildControl from "./BuildControl/BuildControl";
 import classes from "./BuildControls.module.css";
 
 const controls = [
-  { label: "Salad", type: "salad" },
+  { label: "Salad", type: "asalad" },
   { label: "Bacon", type: "bacon" },
   { label: "Cheese", type: "cheese" },
   { label: "Meat", type: "meat" },
