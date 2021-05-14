@@ -12,7 +12,7 @@ const orderSummary = (props) => {
     );  
   });
 
-  return (
+  return ( 
     <Aux>
       <p className={classes.orderSummary}>Your Order </p>
       <p className={classes.orderSummary}>

@@ -101,7 +101,7 @@ class BurgerBuilder extends Component {
     };
 
     axios
-      .post("/orders.", order)
+      .post("https://my-burgers-fd830-default-rtdb.firebaseio.com/orders.json", order)
       .then((responce) => this.setState({ loader: false, purchasing: false }))
       .catch((error) => this.setState({ loader: false, purchasing: false }));
 
