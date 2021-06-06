@@ -1,6 +1,7 @@
 import classes from "./Burger.module.css";
 import BurgerIngredient from "./BurgerIngredient/BurgerIngredient"
-
+import React from 'react';
+import {withRouter} from 'react-router-dom' ;
 const Burger = (props) => {
 let transformedIngredients = Object.keys(props.ingredients)
   .map(igKey => {
@@ -15,7 +16,7 @@ let transformedIngredients = Object.keys(props.ingredients)
   if (transformedIngredients.length === 0 ){
       transformedIngredients = <p>Please Start Adding Ingredients!</p>
   }
-
+  
   return ( 
     <div className= {classes.Burger}>
       <BurgerIngredient type = "breadTop"/>
@@ -30,4 +31,4 @@ let transformedIngredients = Object.keys(props.ingredients)
   
 }
  
-export default Burger;
+export default withRouter(Burger);

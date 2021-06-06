@@ -1,8 +1,8 @@
-import React from 'react';
-import classes from "./BurgerIngredient.module.css";
-import { Component } from "react";
-import PropTypes from 'prop-types';
 
+import classes from "./BurgerIngredient.module.css";
+import React, { Component } from "react";
+import PropTypes from 'prop-types';
+import React from 'react';
 class BurgerIngredient extends Component{
   render  () {
     let ingredient = "null";

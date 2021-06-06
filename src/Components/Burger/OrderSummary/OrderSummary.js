@@ -1,7 +1,7 @@
 import classes from "./OrderSummary.module.css";
 import Aux from "../../../HOC/Hoc";
 import Button from "../../UI/Button/Button";
-
+import React from 'react';
 const orderSummary = (props) => {
   const ingredientSummry = Object.keys(props.ingredients).map((igKey) => {
     return (
@@ -11,6 +11,7 @@ const orderSummary = (props) => {
       </li>
     );  
   });
+
 
   return ( 
     <Aux>

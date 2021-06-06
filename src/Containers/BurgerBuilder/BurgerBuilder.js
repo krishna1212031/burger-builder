@@ -1,6 +1,6 @@
 // import axios from "axios";
 import axios from '../../axios-orders';
-import { Component } from "react";
+import React, { Component } from "react";
 import BuildControls from "../../Components/Burger/BuildControls/BuildControls";
 import OrderSummary from "../../Components/Burger/OrderSummary/OrderSummary";
 import Modal from "../../Components/UI/Modal/Modal";
@@ -85,27 +85,19 @@ class BurgerBuilder extends Component {
   };
 
   purchasContinueHandler = () => {
-    this.setState({ loader: true });
-    const order = {
-      ingredient: this.state.ingredients,
-      totalPrice: this.state.totalprice,
-      customer: {
-        name: "krishna",
-        address: {
-          street: "6th main",
-          pincode: "560068",
-          country: "india",
-        },
-        email: "krishna@something.com",
-      },
-    };
-
-    axios
-      .post("https://my-burgers-fd830-default-rtdb.firebaseio.com/orders.json", order)
-      .then((responce) => this.setState({ loader: false, purchasing: false }))
-      .catch((error) => this.setState({ loader: false, purchasing: false }));
-
+   
     // alert("You Continue !!!!!!");
+    // this.props.history.push("/checkout");
+      const queryPath = [];
+      for (let i in this.state.ingredients){
+        queryPath.push(encodeURIComponent(i) + '=' + encodeURIComponent(this.state.ingredients[i]))
+      }
+      queryPath.push('price=' + this.state.totalprice);
+      const queryString = queryPath.join('&');
+      this.props.history.push({
+        pathname: '/checkout',
+        search : '?' + queryString
+      })
   };
 
   render() {

@@ -1,5 +1,5 @@
 import classes from "./Logo.module.css";
-
+import React from 'react';
 import BurgerLogo from "../../Assets/Images/BurgerLogo.png"
 const logo = (props) => {
   return ( 

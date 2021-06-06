@@ -3,6 +3,7 @@ import Aux from "../../HOC/Hoc";
 import Toolbar from "../Navigation/Toolbar/Toolbar";
 import SideDrawer from "../Navigation/SideDrawer/SideDrawer";
 import { Component } from "react";
+import React from 'react';
 class Layout extends Component {
   state = {
     showSideDrawer: false,

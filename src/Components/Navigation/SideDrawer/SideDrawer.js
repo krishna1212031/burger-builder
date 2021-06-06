@@ -3,7 +3,7 @@ import Logo from "../../Logo/Logo";
 import NavigationItems from "../NavigationItems/NavigationItems";
 import Aux from "../../../HOC/Hoc";
 import BackDrop from "../../UI/BackDrop/BackDrop";
-
+import React from 'react';
 
 const sideDrawer = (props) => {
   let attatchedClasses = [classes.sideDrawer, classes.close];
